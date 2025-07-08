@@ -16,4 +16,4 @@ test:
 
 .PHONY: run
 run:
-	docker compose -f $(COMPOSE_FILE) --profile local up
+	docker compose -f $(COMPOSE_FILE) --profile local up --build

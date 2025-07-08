@@ -70,6 +70,7 @@ func main() {
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 	go statisticService.Processor(ctx)
+	go statisticService.SchedulerFlush(ctx)
 
 	handler := ihttp.NewHandler(log, urlService)
 

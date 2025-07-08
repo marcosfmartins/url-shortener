@@ -4,7 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/marcosfmartins/url_shortener/internal/entity"
+	"github.com/marcosfmartins/url-shortener/internal/entity"
 	"github.com/stretchr/testify/assert"
 	"io"
 	"net/http"

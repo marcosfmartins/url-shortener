@@ -3,7 +3,7 @@ package kafka
 import (
 	"context"
 	"errors"
-	"github.com/marcosfmartins/url_shortener/internal/entity"
+	"github.com/marcosfmartins/url-shortener/internal/entity"
 	"github.com/segmentio/kafka-go"
 )
 

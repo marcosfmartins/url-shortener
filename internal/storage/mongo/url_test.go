@@ -2,8 +2,8 @@ package storage
 
 import (
 	"context"
-	"github.com/marcosfmartins/url_shortener/internal/entity"
-	"github.com/marcosfmartins/url_shortener/pkg/id"
+	"github.com/marcosfmartins/url-shortener/internal/entity"
+	"github.com/marcosfmartins/url-shortener/pkg/id"
 	"github.com/stretchr/testify/assert"
 	"go.mongodb.org/mongo-driver/v2/bson"
 	"go.mongodb.org/mongo-driver/v2/mongo"

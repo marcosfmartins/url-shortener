@@ -2,7 +2,7 @@ package service
 
 import (
 	"context"
-	"github.com/marcosfmartins/url_shortener/internal/entity"
+	"github.com/marcosfmartins/url-shortener/internal/entity"
 	"sync"
 	"time"
 )

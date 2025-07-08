@@ -2,7 +2,7 @@ package redis
 
 import (
 	"context"
-	"github.com/marcosfmartins/url_shortener/internal/entity"
+	"github.com/marcosfmartins/url-shortener/internal/entity"
 	"github.com/redis/go-redis/v9"
 	"strings"
 	"time"

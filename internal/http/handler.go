@@ -1,7 +1,7 @@
 package http
 
 import (
-	"github.com/marcosfmartins/url_shortener/internal/entity"
+	"github.com/marcosfmartins/url-shortener/internal/entity"
 	"net/http"
 
 	"github.com/gin-gonic/gin"

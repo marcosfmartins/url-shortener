@@ -3,8 +3,8 @@ package kafka
 import (
 	"context"
 	"encoding/json"
-	"github.com/marcosfmartins/url_shortener/internal/entity"
-	"github.com/marcosfmartins/url_shortener/pkg/id"
+	"github.com/marcosfmartins/url-shortener/internal/entity"
+	"github.com/marcosfmartins/url-shortener/pkg/id"
 	"github.com/segmentio/kafka-go"
 	"github.com/stretchr/testify/assert"
 	"os"

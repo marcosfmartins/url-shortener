@@ -9,10 +9,11 @@ lint:
 test:
 	mkdir -p coverage
 	docker compose --profile test up test --build
+	docker compose --profile test down --volumes --remove-orphans
 	sed -i '/_mock.go/d' coverage/coverage.out
 	go tool cover -html=coverage/coverage.out -o coverage/index.html
 	rm -f coverage/coverage.out
 
 .PHONY: run
 run:
-	docker compose -f $(COMPOSE_FILE) --profile default up
+	docker compose -f $(COMPOSE_FILE) --profile local up

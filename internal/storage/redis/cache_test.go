@@ -2,7 +2,7 @@ package redis
 
 import (
 	"context"
-	"github.com/marcosfmartins/url_shortener/pkg/id"
+	"github.com/marcosfmartins/url-shortener/pkg/id"
 	"github.com/stretchr/testify/assert"
 	"os"
 	"testing"

@@ -3,8 +3,8 @@ package service
 import (
 	"bytes"
 	"context"
-	"github.com/marcosfmartins/url_shortener/internal/entity"
-	"github.com/marcosfmartins/url_shortener/pkg/logger"
+	"github.com/marcosfmartins/url-shortener/internal/entity"
+	"github.com/marcosfmartins/url-shortener/pkg/logger"
 	"github.com/rs/zerolog"
 	"github.com/stretchr/testify/assert"
 	"testing"

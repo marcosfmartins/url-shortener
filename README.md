@@ -14,7 +14,7 @@ flowchart TD
 ```
 
 
-### run app
+### Run app
 
 ```sh
 make run

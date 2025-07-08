@@ -3,7 +3,7 @@ COMPOSE_FILE := docker-compose.yml
 .PHNY: lint
 lint:
 	@echo "Running golangci-lint..."
-	docker run -t --rm -v $(pwd):/app -w /app golangci/golangci-lint:v2.2.1 golangci-lint run
+	docker run -t --rm -v $(shell pwd):/app -w /app golangci/golangci-lint:v2.2.1 golangci-lint run
 
 .PHONY: test
 test:

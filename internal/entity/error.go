@@ -1,6 +1,9 @@
 package entity
 
-import "net/http"
+import (
+	"fmt"
+	"net/http"
+)
 
 type Error struct {
 	Message string
@@ -17,20 +20,26 @@ func NewError(message string, code int) *Error {
 }
 
 func (e *Error) WithError(err error) *Error {
-	e.Err = err
+	if err != nil {
+		obj := *e
+		obj.Err = err
+		obj.Detail = err.Error()
+
+		return &obj
+	}
 	return e
 }
 
 func (e *Error) Decorate(msg string) *Error {
-	e.Detail = msg
-	return e
+	obj := *e
+	obj.Detail = msg
+	return &obj
 }
 
 func (e *Error) Error() string {
-	//fmt.Println(e.Message)
-	//if e.Detail != "" {
-	//	return fmt.Sprintf("%s: %s", e.Message, e.Detail)
-	//}
+	if e.Detail != "" {
+		return fmt.Sprintf("%s: %s", e.Message, e.Detail)
+	}
 
 	return e.Message
 }

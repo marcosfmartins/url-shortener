@@ -1,0 +1,92 @@
+openapi: 3.0.3
+info:
+  title: URL Shortener API
+  version: 1.0.0
+  description: API para encurtamento de URLs
+servers:
+  - url: http://localhost:8080
+paths:
+  /url/{id}:
+    delete:
+      summary: Deleta uma URL encurtada
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Deletado com sucesso
+        '404':
+          description: Não encontrado
+    get:
+      summary: Obtém uma URL encurtada
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: URL encontrada
+          content:
+            application/json:
+              schema:
+                type: object
+        '404':
+          description: Não encontrado
+  /url/{id}/statistic:
+    get:
+      summary: Obtém estatísticas de uma URL encurtada
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Estatísticas retornadas
+          content:
+            application/json:
+              schema:
+                type: object
+        '404':
+          description: Não encontrado
+  /url:
+    post:
+      summary: Cria uma nova URL encurtada
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                url:
+                  type: string
+      responses:
+        '201':
+          description: Criado com sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          description: Requisição inválida
+  /{id}:
+    get:
+      summary: Redireciona para a URL original
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '302':
+          description: Redirecionamento
+        '404':
+          description: Não encontrado

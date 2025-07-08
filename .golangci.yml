@@ -1,0 +1,38 @@
+version: "2"
+run:
+  concurrency: 4
+  tests: false
+linters:
+  default: none
+  enable:
+    - bodyclose
+    - copyloopvar
+    - dogsled
+    - dupl
+    - errcheck
+    - gocognit
+    - goconst
+    - gocyclo
+    - gosec
+    - govet
+    - mnd
+    - staticcheck
+    - unconvert
+    - unused
+    - whitespace
+  exclusions:
+    generated: lax
+    presets:
+      - comments
+      - common-false-positives
+      - legacy
+      - std-error-handling
+    paths:
+      - .*_mock\.go$
+formatters:
+  enable:
+    - gofmt
+  exclusions:
+    generated: lax
+    paths:
+      - .*_mock\.go$
